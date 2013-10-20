@@ -1,69 +1,183 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Conditionizr.github.com : " />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Conditionizr.github.com</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/conditionizr">View on GitHub</a>
-
-          <h1 id="project_title">Conditionizr.github.com</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<title>Conditionizr: the conditional free legacy, retina, touch, script and style loader</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="description" content="Conditionizr is a fast and lightweight (3KB) javascript utility that detects browser and pixel ratio, allowing you to serve conditional JavaScript and CSS files.">
+		<link href="//www.google-analytics.com" rel="dns-prefetch">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<script src="//conditionizr.com/js/conditionizr.js"></script>
+		<script>
+		// No DOM Ready required, let it run as fast as it can
+		// Conditionally loading HTML5shiv here too, give this site a try in IE7/8
+		conditionizr({
+			debug      : true,
+			scriptSrc  : 'js/conditionizr/',
+			styleSrc   : 'css/conditionizr/',
+			ieLessThan : { active: true, version: '9', scripts: false, styles: false, classes: true, customScript: '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js'},
+			chrome     : { scripts: true, styles: true, classes: true, customScript: false },
+			safari     : { scripts: true, styles: true, classes: true, customScript: false },
+			opera      : { scripts: true, styles: true, classes: true, customScript: false },
+			firefox    : { scripts: true, styles: true, classes: true, customScript: false },
+			ie10       : { scripts: true, styles: true, classes: true, customScript: false },
+			ie9        : { scripts: true, styles: true, classes: true, customScript: false },
+			ie8        : { scripts: true, styles: true, classes: true, customScript: false },
+			ie7        : { scripts: true, styles: true, classes: true, customScript: false },
+			ie6        : { scripts: true, styles: true, classes: true, customScript: false },
+			retina     : { scripts: true, styles: true, classes: true, customScript: false },
+			touch      : { scripts: true, styles: true, classes: true, customScript: false },
+			mac        : true,
+			win        : true,
+			x11        : true,
+			linux      : true
+		})
+		</script>
+	</head>
+	<body>
+		<div id="carbonads-container">
+			<div class="carbonad">
+				<div id="azcarbon"></div>
+				<script>
+				var z = document.createElement("script"); z.async = true;
+				z.src = "//engine.carbonads.com/z/34229/azcarbon_2_1_0_HORIZ";
+				var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);
+				</script>
+			</div>
+		</div>
+		<header class="header">
+			<div class="wrapper">
+				<div class="logo">
+					<a href="/">
+						<h1>Condition<span>izr</span></h1>
+					</a>
+					<a href="//twitter.com/conditionizr" class="twitter-follow-button" data-show-count="false">
+						Follow @conditionizr
+					</a>
+				</div>
+				<p class="overview">
+					Conditionizr is a fast and lightweight (3KB) javascript utility that 
+					detects browser vendor - touch features and retina displays - allowing 
+					you to serve conditional JavaScript and CSS files. MIT Licensed.
+				</p>
+			</div>
+		</header>
+		<section class="download">
+			<div class="wrapper">
+				<a href="//github.com/conditionizr/conditionizr/archive/master.zip" class="download-button">
+					<i class="icon icon-cloud-download"></i>
+					Download v3.0.0
+				</a><!--
+				--><a href="/docs.html" class="download-button">
+					<i class="icon icon-beaker"></i>
+					Documentation
+				</a><!--
+				--><a href="//github.com/conditionizr/conditionizr/" class="download-button">
+					<i class="icon icon-github"></i>
+					Fork project
+				</a>
+			</div>
+		</section>
+		<section class="features">
+			<div class="wrapper">
+				<div class="feature-content">
+					<div class="feature-box">
+						<i class="feature-icon icon-tasks"></i>
+						<h2>Conditional loading</h2>
+						<h3>
+							Conditional statements are a thing of the past, let Conditionizr dynamically load legacy files.
+						</h3>
+					</div>
+					<div class="feature-box">
+						<i class="feature-icon icon-camera"></i>
+						<h2>Retina detection</h2>
+						<h3>
+							Top notch retina detection for progressive CSS optimisations and optional file loading.
+						</h3>
+					</div>
+					<div class="feature-box">
+						<i class="feature-icon icon-bolt"></i>
+						<h2>Touch detection</h2>
+						<h3>
+							Detect a touch device and load scripts that will allow it to behave differently.
+						</h3>
+					</div>
+					<div class="feature-box">
+						<i class="feature-icon icon-trophy"></i>
+						<h2>Dynamic classes</h2>
+						<h3>
+							Conditionizr appends the browser name in use so you can optimise with CSS overrides.
+						</h3>
+					</div>
+					<div class="feature-box">
+						<i class="feature-icon icon-plus-sign-alt"></i>
+						<h2>Polyfill queuing</h2>
+						<h3>
+							With intelligent 'ieLessThan' functionality, queue your polyfills for the right IE browsers.
+						</h3>
+					</div>
+					<div class="feature-box">
+						<i class="feature-icon icon-cogs"></i>
+						<h2>Browsers and platforms</h2>
+						<h3>
+							Conditionizr gives you modern browser and platform HTML tag classes for ultimate fine-tuning.
+						</h3>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="team">
+			<div class="wrapper">
+				<div class="team-box">
+					<h2>Conditionizr team</h2>
+					<div class="team-member">
+						<img src="img/todd-motto.jpg" alt="Todd Motto">
+						<h2>
+							<a href="//toddmotto.com">Todd Motto</a>
+						</h2>
+						<a href="//twitter.com/toddmotto" class="twitter-follow-button" data-show-count="false">Follow @toddmotto</a>
+					</div><!--
+					--><div class="team-member">
+						<img src="img/mark-goodyear.jpg" alt="Mark Goodyear">
+						<h2>
+							<a href="//markgoodyear.com">Mark Goodyear</a>
+						</h2>
+						<a href="//twitter.com/markgdyr" class="twitter-follow-button" data-show-count="false">Follow @markgdyr</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="footer">
+			<div class="wrapper">
+				<div class="footer-column">
+					<h2>Quick CDN access</h2>
+					<input type="text" class="access" value="//cdnjs.cloudflare.com/ajax/libs/conditionizr.js/2.2.0/conditionizr.min.js">
+				</div>
+				<div class="footer-column">
+					<h2>Share Conditionizr!</h2>
+					<div class="addthis_toolbox addthis_default_style">
+						<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+						<a class="addthis_button_tweet"></a>
+						<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</section>
+		<script>
+		// Twitter
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+		if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";
+		fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+		</script>
+		<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-50992fda5f2630d6"></script>
+		<script>
+		// Google Analytics
+		var _gaq=[['_setAccount','UA-20440416-12'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src='//www.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)})(document,'script');
+		</script>
+	</body>
 </html>

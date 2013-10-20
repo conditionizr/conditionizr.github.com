@@ -1,0 +1,322 @@
+/*
+	Conditionizr
+	Author: Todd Motto
+	URL: www.conditionizr.com
+*/
+
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+
+*,
+*:after,
+*:before {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+img {
+	max-width:100%;
+	vertical-align:bottom;
+}
+a {
+	color:#FFF;
+	text-decoration:none;
+}
+a img {
+	border:0;
+}
+h1,
+h2,
+h3 {
+	font-weight:300;
+}
+.clear {
+	display:block;
+	clear:both;
+}
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+body {
+	font:600 15px/1.6 'Dekar', Helvetica, Arial, sans-serif;
+	color:#FFF;
+	background:#2E3845;
+}
+.wrapper {
+	max-width:1280px;
+	width:95%;
+	margin:0 auto;
+	position:relative;
+}
+.header {
+	text-align:center;
+}
+.logo {
+	max-width:100%;
+	display:inline-block;
+	font-size:36px;
+	margin:50px 0 20px;
+}
+.logo h1 {
+	text-transform:uppercase;
+}
+.logo span {
+	color:#FF6F65;
+}
+.icon {
+	margin:0 15px 0 0;
+	font-size:25px;
+}
+.overview {
+	max-width:800px;
+	font-size:18px;
+	margin:0 auto 50px;
+}
+.download {
+	text-align:center;
+	font-size:16px;
+}
+.download-button {
+	background:#262F3B;
+	color:#FFF;
+	display:block;
+	padding:15px 25px;
+	margin:0 5px 5px;
+	display:inline-block;
+}
+.download-button:hover {
+	color:#262F3B;
+	background:#FFF;
+}
+.features {
+	margin:50px 0 0;
+}
+.feature-content {
+	overflow:hidden;
+}
+.feature-box {
+	text-align:center;
+	color:#262F3B;
+	float:left;
+	background:#FFF;
+	background:rgba(255,255,255,0.8);
+	padding:20px;
+	min-height:190px;
+	width:31.1111%;
+	margin:0 1.1111% 2%;
+}
+.feature-box:hover {
+	background:rgba(255,255,255,1);
+}
+.feature-box h2,
+.feature-box h3 {
+	font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight:300;
+}
+.feature-box h3 {
+	font-size:14px;
+}
+.feature-icon {
+	font-size:45px;
+}
+.team-box {
+	max-width:800px;
+	margin:0 auto 160px;
+	text-align:center;
+}
+.team h2 {
+	font-size:28px;
+	margin:0 0 20px;
+}
+.team-member {
+	background:#262F3B;
+	display:inline-block;
+	margin:0 5px;
+	width:250px;
+	padding:25px;
+}
+.footer {
+	background:#262F3B;
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	padding:10px;
+	height:120px;
+	box-shadow:0 -1px 4px rgba(0,0,0,0.3);
+	-webkit-box-shadow:0 -1px 4px rgba(0,0,0,0.3);
+	-moz-box-shadow:0 -1px 4px rgba(0,0,0,0.3);
+}
+.footer-column {
+	float:left;
+	*display:inline;
+	width:31.1111%;
+	margin:0 1.1111%;
+}
+.social-button {
+	display:inline-block;
+	vertical-align:top;
+	*display:inline;
+	zoom:1;
+	width:100px;
+	height:20px;
+}
+.access {
+	float:left;
+	background:#2E3845;
+	color:#FFF;
+	padding:5px;
+	border:0;
+	outline:0;
+	width:100%;
+}
+.documentation {
+	margin:25px 0;
+}
+.docs {
+	background:#262F3B;
+	padding:25px 0;
+	text-align:center;
+}
+.docs-icon {
+	margin:0 10px 0 0;
+}
+.content p {
+	margin:10px 0 20px;
+}
+.code,pre {
+	background:rgba(255,255,255,0.5);
+	border:1px solid rgba(255,255,255,0.6);
+	padding:2px;
+	color:#262F3B;
+}
+pre {
+	padding:15px;
+	overflow-x:scroll;
+}
+.comment {
+	color:#777;
+}
+.docs-list h4 {
+	width:100%;
+	float:left;
+	padding:5px 10px;
+	background:#262F3B;
+	color:#FFF;
+	font-size:20px;
+}
+.docs-list {
+	margin:0 0 160px;
+	font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight:300;
+}
+.docs-list a {
+	color:#262F3B;
+	text-decoration:underline;
+}
+.content {
+	position:relative;
+	width:100%;
+	padding:15px;
+	float:left;
+	background:#FFF;
+	background:rgba(255,255,255,0.8);
+	color:#262F3B;
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+#carbonads-container {
+	background:rgba(255,255,255,0.3);
+	border:1px solid rgba(255,255,255,0.3);
+	border-right:0;
+	border-top:0;
+	position:fixed;
+	top:0;
+	right:0;
+	z-index:999;
+}
+.carbonad {
+	background:none !important;
+	background-image:none !important;
+}
+.carbonad-text a {
+	color:#FFF;
+}
+
+/*------------------------------------*\
+    TYPOGRAPHY
+\*------------------------------------*/
+
+@font-face {
+	font-family:'Dekar';
+	src:url(../fonts/dekar.eot);
+	src:url(../fonts/dekar.eot?#iefix) format('embedded-opentype'),
+		url(../fonts/dekar.woff) format('woff'),
+		url(../fonts/dekar.ttf) format('truetype'),
+		url(../fonts/dekar.svg#dekar_lightregular) format('svg');
+}
+
+/*------------------------------------*\
+	RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (min-width: 320px) and (max-width: 586px) {
+	.logo {
+		font-size:30px;
+	}
+	.download-button {
+		width:95%;
+	}
+	.feature-box {
+		width:100%;
+	}
+	.team-box,
+	.docs-list {
+		margin:0 auto 30px;
+	}
+	.team-member {
+		width:90%;
+	}
+	.team h2 {
+		margin:15px 0 20px;
+	}
+	#carbonads-container {
+		display:none;
+	}
+	.footer {
+		position:static;
+		height:auto;
+	}
+	.footer-column {
+		width:100%;
+		margin:20px 0;
+	}
+}
+@media only screen and (min-width: 587px) and (max-width: 768px) {
+	.feature-box {
+		width:47.7%;
+	}
+	.team-box,
+	.docs-list {
+		margin:0 auto 30px;
+	}
+	.footer {
+		position:static;
+		height:auto;
+	}
+	.footer-column {
+		width:100%;
+		margin:20px 0;
+	}
+}
