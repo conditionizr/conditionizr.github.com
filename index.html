@@ -1,183 +1,37 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Conditionizr: the conditional free legacy, retina, touch, script and style loader</title>
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<meta name="description" content="Conditionizr is a fast and lightweight (3KB) javascript utility that detects browser and pixel ratio, allowing you to serve conditional JavaScript and CSS files.">
-		<link href="//www.google-analytics.com" rel="dns-prefetch">
-		<link href="css/style.css" rel="stylesheet">
-		<link href="css/font-awesome.min.css" rel="stylesheet">
-		<script src="//conditionizr.com/js/conditionizr.js"></script>
-		<script>
-		// No DOM Ready required, let it run as fast as it can
-		// Conditionally loading HTML5shiv here too, give this site a try in IE7/8
-		conditionizr({
-			debug      : true,
-			scriptSrc  : 'js/conditionizr/',
-			styleSrc   : 'css/conditionizr/',
-			ieLessThan : { active: true, version: '9', scripts: false, styles: false, classes: true, customScript: '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js'},
-			chrome     : { scripts: true, styles: true, classes: true, customScript: false },
-			safari     : { scripts: true, styles: true, classes: true, customScript: false },
-			opera      : { scripts: true, styles: true, classes: true, customScript: false },
-			firefox    : { scripts: true, styles: true, classes: true, customScript: false },
-			ie10       : { scripts: true, styles: true, classes: true, customScript: false },
-			ie9        : { scripts: true, styles: true, classes: true, customScript: false },
-			ie8        : { scripts: true, styles: true, classes: true, customScript: false },
-			ie7        : { scripts: true, styles: true, classes: true, customScript: false },
-			ie6        : { scripts: true, styles: true, classes: true, customScript: false },
-			retina     : { scripts: true, styles: true, classes: true, customScript: false },
-			touch      : { scripts: true, styles: true, classes: true, customScript: false },
-			mac        : true,
-			win        : true,
-			x11        : true,
-			linux      : true
-		})
-		</script>
-	</head>
-	<body>
-		<div id="carbonads-container">
-			<div class="carbonad">
-				<div id="azcarbon"></div>
-				<script>
-				var z = document.createElement("script"); z.async = true;
-				z.src = "//engine.carbonads.com/z/34229/azcarbon_2_1_0_HORIZ";
-				var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);
-				</script>
-			</div>
-		</div>
-		<header class="header">
-			<div class="wrapper">
-				<div class="logo">
-					<a href="/">
-						<h1>Condition<span>izr</span></h1>
-					</a>
-					<a href="//twitter.com/conditionizr" class="twitter-follow-button" data-show-count="false">
-						Follow @conditionizr
-					</a>
-				</div>
-				<p class="overview">
-					Conditionizr is a fast and lightweight (3KB) javascript utility that 
-					detects browser vendor - touch features and retina displays - allowing 
-					you to serve conditional JavaScript and CSS files. MIT Licensed.
-				</p>
-			</div>
-		</header>
-		<section class="download">
-			<div class="wrapper">
-				<a href="//github.com/conditionizr/conditionizr/archive/v3.0.0.zip" class="download-button">
-					<i class="icon icon-cloud-download"></i>
-					Download v3.0.0
-				</a><!--
-				--><a href="/docs.html" class="download-button">
-					<i class="icon icon-beaker"></i>
-					Documentation
-				</a><!--
-				--><a href="//github.com/conditionizr/conditionizr/" class="download-button">
-					<i class="icon icon-github"></i>
-					Fork project
-				</a>
-			</div>
-		</section>
-		<section class="features">
-			<div class="wrapper">
-				<div class="feature-content">
-					<div class="feature-box">
-						<i class="feature-icon icon-tasks"></i>
-						<h2>Conditional loading</h2>
-						<h3>
-							Conditional statements are a thing of the past, let Conditionizr dynamically load legacy files.
-						</h3>
-					</div>
-					<div class="feature-box">
-						<i class="feature-icon icon-camera"></i>
-						<h2>Retina detection</h2>
-						<h3>
-							Top notch retina detection for progressive CSS optimisations and optional file loading.
-						</h3>
-					</div>
-					<div class="feature-box">
-						<i class="feature-icon icon-bolt"></i>
-						<h2>Touch detection</h2>
-						<h3>
-							Detect a touch device and load scripts that will allow it to behave differently.
-						</h3>
-					</div>
-					<div class="feature-box">
-						<i class="feature-icon icon-trophy"></i>
-						<h2>Dynamic classes</h2>
-						<h3>
-							Conditionizr appends the browser name in use so you can optimise with CSS overrides.
-						</h3>
-					</div>
-					<div class="feature-box">
-						<i class="feature-icon icon-plus-sign-alt"></i>
-						<h2>Polyfill queuing</h2>
-						<h3>
-							With intelligent 'ieLessThan' functionality, queue your polyfills for the right IE browsers.
-						</h3>
-					</div>
-					<div class="feature-box">
-						<i class="feature-icon icon-cogs"></i>
-						<h2>Browsers and platforms</h2>
-						<h3>
-							Conditionizr gives you modern browser and platform HTML tag classes for ultimate fine-tuning.
-						</h3>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="team">
-			<div class="wrapper">
-				<div class="team-box">
-					<h2>Conditionizr team</h2>
-					<div class="team-member">
-						<img src="img/todd-motto.jpg" alt="Todd Motto">
-						<h2>
-							<a href="//toddmotto.com">Todd Motto</a>
-						</h2>
-						<a href="//twitter.com/toddmotto" class="twitter-follow-button" data-show-count="false">Follow @toddmotto</a>
-					</div><!--
-					--><div class="team-member">
-						<img src="img/mark-goodyear.jpg" alt="Mark Goodyear">
-						<h2>
-							<a href="//markgoodyear.com">Mark Goodyear</a>
-						</h2>
-						<a href="//twitter.com/markgdyr" class="twitter-follow-button" data-show-count="false">Follow @markgdyr</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="footer">
-			<div class="wrapper">
-				<div class="footer-column">
-					<h2>Quick CDN access</h2>
-					<input type="text" class="access" value="//cdnjs.cloudflare.com/ajax/libs/conditionizr.js/2.2.0/conditionizr.min.js">
-				</div>
-				<div class="footer-column">
-					<h2>Share Conditionizr!</h2>
-					<div class="addthis_toolbox addthis_default_style">
-						<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-						<a class="addthis_button_tweet"></a>
-						<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-					</div>
-				</div>
-				<div class="clear"></div>
-			</div>
-		</section>
-		<script>
-		// Twitter
-		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
-		if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";
-		fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-		</script>
-		<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-50992fda5f2630d6"></script>
-		<script>
-		// Google Analytics
-		var _gaq=[['_setAccount','UA-20440416-12'],['_trackPageview']];
-		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-		g.src='//www.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g,s)})(document,'script');
-		</script>
-	</body>
-</html>
+<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><title>Conditionizr: Detecting front-end environments and conditionally loading assets, wrapped inside a 1KB API</title><script src="assets/js/vendor/conditionizr.min.js"></script><script>conditionizr.add('ie8', [], function () {
+      var version = false;
+      /*@cc_on
+          if (@_jscript_version > 5.7 && !/^(9|10)/.test(@_jscript_version))
+          version = true
+      @*/
+      return version;
+  });
+  conditionizr.add('svg', ['class'], function () {
+      return !! document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect;
+  });
+
+  conditionizr.polyfill('assets/js/vendor/html5shiv.min.js', ['ie8']);
+  conditionizr.polyfill('assets/js/vendor/selectivizr.min.js', ['ie8']);</script><meta name="description" content=""><meta name="author" content=""><meta name="viewport" content="width=device-width,initial-scale=1"><link href="//www.google-analytics.com" rel="dns-prefetch"><link href="//ajax.googleapis.com" rel="dns-prefetch"><link rel="stylesheet" href="assets/css/global.min.css"><link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet"><!--[if IE]><![endif]--></head><body><header class="site-head" role="banner"><div id="carbonads-container"><div class="carbonad"><div id="azcarbon"><span class="carbonad-image"><a href="http://engine.carbonads.com/r?e=eyJhdiI6MjE0NTIsImF0IjoxLCJjbSI6NDk5MTIsImNoIjoxMjA0LCJjciI6MTM4MzM5LCJkaSI6ImM2ZmM5ZGI4Nzk4NzRhMmI5OTk5NTEzMjk3M2MzZGM1IiwiZG0iOjEsImZjIjoxODk3MDIsImZsIjo4OTY0OCwibnciOjM5LCJydiI6MC45LCJwciI6NDQ4Miwic3QiOjM0MjI5LCJ6biI6MCwidXIiOiJodHRwOi8vd3d3LmxhdW5jaGJpdC5jb20vdGF6Lzk1MzMtNDY0Ni0xMTEvIn0&amp;s=F-YbPOFW841SFJ94qe5qeMDB8Mk" title="Free Nerd Life tee." target="_blank"><img id="adzerk_ad" class="carbonad-image carbonad-img" border="0" width="130" height="100" src="http://www.launchbit.com/taz-i/4646-4626.png" alt="Free Nerd Life tee."></a></span><span class="carbonad-text"><a href="http://www.launchbit.com/taz/9533-4646-111/" target="_blank">Free Nerd Life tee.</a> Use New Relic to check Ruby, PHP, Python, Java &amp; .NET apps.</span><span class="carbonad-tag">ads via <a href="http://carbonads.com">Carbon</a></span><img src="http://www.launchbit.com/taz-pixel/9533-4646-111/"><img height="0px" width="0px" border="0" src="http://engine.carbonads.com/i.gif?e=eyJhdiI6MjE0NTIsImF0IjoxLCJjbSI6NDk5MTIsImNoIjoxMjA0LCJjciI6MTM4MzM5LCJkaSI6ImM2ZmM5ZGI4Nzk4NzRhMmI5OTk5NTEzMjk3M2MzZGM1IiwiZG0iOjEsImZjIjoxODk3MDIsImZsIjo4OTY0OCwibnciOjM5LCJydiI6MC45LCJwciI6NDQ4Miwic3QiOjM0MjI5LCJ6biI6MH0&amp;s=e4VpS9cuIL0dOM_LGU_p6FqdhDg"></div><script>var z = document.createElement("script"); z.async = true;
+    z.src = "//engine.carbonads.com/z/34229/azcarbon_2_1_0_HORIZ";
+    var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div><a class="logo" href="/"><img class="logo__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Conditionizr"></a><nav class="site-nav" role="navigation"><ul><li><a href="/detects"><i class="icon-desktop"></i><span class="site-nav__label">Detects</span></a></li><li><a href="https://github.com/conditionizr/conditionizr/blob/master/docs/DOCS.md#conditionizr-v400-docs"><i class="icon-file-text"></i><span class="site-nav__label">Documentation</span></a></li><li><a href="https://github.com/conditionizr/conditionizr"><i class="icon-github"></i><span class="site-nav__label">GitHib</span></a></li></ul></nav></header><main class="main" role="main"><div id="content-wrap" class="content-wrap"><section class="intro"><header class="intro__head"><p class="intro__description">Detecting front-end environments and conditionally loading assets, wrapped inside a 1KB API</p></header><div class="download"><a class="btn download__btn" href="#"><i class="icon-download-alt"></i> Download v4</a><div class="download__git"><input value="git clone https://github.com/conditionizr/conditionizr.git" onclick="this.focus();this.select()"></div></div><ul class="social"><li><iframe src="http://ghbtns.com/github-btn.html?user=conditionizr&repo=conditionizr&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90" height="20"></iframe></li><li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://conditionizr.com" data-via="conditionizr">Tweet</a></li><li><a href="https://twitter.com/conditionizr" class="twitter-follow-button" data-show-count="true">Follow @conditionizr</a></li></ul></section><h2>Overview</h2><p>With previous versions of Conditionizr, tests were limited and loaded internally. Conditionizr now ships as just a fully-fledged API that you can add unlimited tests onto. Conditionizr adds those tests to it&#39;s internal Object and returns it for you to bolt into in the DOM, for ultimate optimisation.</p><h2>.config()</h2><p>The config API allows you to easily configure your conditional environments, once tests are added. You have a choice of loading conditional scripts, styles and class names per config test, as well as specifying an asset path to where your files are.</p><pre><code class="language-js">conditionizr.config({
+  assets: <span class="string">'/path/to/my/assets/'</span>,
+  tests: {
+    <span class="string">'safari'</span>: [<span class="string">'script'</span>, <span class="string">'style'</span>, <span class="string">'class'</span>]
+  }
+});</code></pre><p>This would then load browser specific tweaks, or you could use the global class override:</p><pre><code class="language-html">&lt;html class=&quot;safari&quot;&gt;
+  &lt;head&gt;
+    &lt;script src=&quot;path/to/my/assets/js/safari.js&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;path/to/my/assets/css/safari.css&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;/head&gt;
+&lt;/html&gt;</code></pre><h2>.add()</h2><p>Custom tests can be bolted into the Conditionizr core and used with all the APIs, making your conditional coding seamless. Conditionizr will handle all the hard work for you, you just need to provide it a test that returns a boolean, true/false.</p><pre><code class="language-js">conditionizr.add(<span class="string">'safari'</span>, [], <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+  <span class="keyword">return</span> <span class="regexp">/constructor/i</span>.test(window.HTMLElement);
+});</code></pre><h2>.on()</h2><p>Using <code>.on()</code> you can create custom callbacks for when conditional tests return true which are your best bet if you can avoid loading an external script and style, for instance if I’ve added a test for Safari, when a user is running Safari, your callback will run. This is preferred as it saves an HTTP request and improves performance.</p><pre><code class="language-js">conditionizr.on(<span class="string">'safari'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+  <span class="comment">// safari</span>
+});</code></pre><p>Conditionizr returns an object for you to also test environment states inside expressions</p><pre><code class="language-js"><span class="keyword">if</span> (conditionizr.safari) {
+  <span class="comment">// safari</span>
+}</code></pre><h2>.polyfill()</h2><p>Polyfill and load each allow you to inject custom assets based on a conditional test. All you need is the external URI, and your predefined conditional tests to declare.</p><pre><code class="language-js">conditionizr.polyfill(<span class="string">'//html5shiv.googlecode.com/svn/trunk/html5.js'</span>, [<span class="string">'ie6'</span>, <span class="string">'ie7'</span>, <span class="string">'ie8'</span>]);</code></pre><p>Using the .load() API instead of .polyfill() is purely for naming conventions to differentiate between polyfills and generic assets.</p><pre><code class="language-js">conditionizr.load(<span class="string">'//cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.5/hammer.min.js'</span>, [<span class="string">'ios'</span>]);</code></pre></div></main><section class="authors"><div class="container"><p class="authors__title">Conditionizr is brought to you by:</p><div class="author"><a href="//toddmotto.com"><img class="author__img" src="assets/img/todd-motto.jpg" alt="Todd Motto"><p>Todd Motto</p></a> <a href="//twitter.com/toddmotto" class="twitter-follow-button" data-show-count="false">Follow @toddmotto</a></div><div class="author"><a href="//markgoodyear.com"><img class="author__img" src="assets/img/mark-goodyear.jpg" alt="Mark Goodyear"><p>Mark Goodyear</p></a> <a href="//twitter.com/markgdyr" class="twitter-follow-button" data-show-count="false">Follow @markgdyr</a></div></div></section><footer class="site-foot" role="contentinfo">Copyright &copy; 2013. Conditionizr is available under the MIT license.</footer><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script><script src="assets/js/global.min.js"></script><script>(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
+    (f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
+    l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-20440416-12');
+    ga('send', 'pageview');</script></body></html>

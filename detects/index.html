@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>Conditionizr: Detecting front-end environments and conditionally loading assets, wrapped inside a 1KB API</title>
+  <script src="../assets/js/vendor/conditionizr.min.js"></script>
+
+  <!-- conditionizr -->
+  <script>
+  conditionizr.add('ie8', [], function () {
+      var version = false;
+      /*@cc_on
+          if (@_jscript_version > 5.7 && !/^(9|10)/.test(@_jscript_version))
+          version = true
+      @*/
+      return version;
+  });
+  conditionizr.add('svg', ['class'], function () {
+      return !! document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect;
+  });
+
+  conditionizr.polyfill('../assets/js/vendor/html5shiv.min.js', ['ie8']);
+  conditionizr.polyfill('../assets/js/vendor/selectivizr.min.js', ['ie8']);
+
+  </script>
+  <!-- /conditionizr -->
+
+  <!-- meta -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- prefetch -->
+  <link href="//www.google-analytics.com" rel="dns-prefetch">
+  <link href="//ajax.googleapis.com" rel="dns-prefetch">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="../assets/css/global.min.css">
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet">
+
+  <!--[if IE]><![endif]-->
+</head>
+<body>
+
+  <!-- header -->
+  <header class="site-head" role="banner">
+    <div id="carbonads-container">
+  <div class="carbonad">
+    <div id="azcarbon"><span class="carbonad-image"><a href="http://engine.carbonads.com/r?e=eyJhdiI6MjE0NTIsImF0IjoxLCJjbSI6NDk5MTIsImNoIjoxMjA0LCJjciI6MTM4MzM5LCJkaSI6ImM2ZmM5ZGI4Nzk4NzRhMmI5OTk5NTEzMjk3M2MzZGM1IiwiZG0iOjEsImZjIjoxODk3MDIsImZsIjo4OTY0OCwibnciOjM5LCJydiI6MC45LCJwciI6NDQ4Miwic3QiOjM0MjI5LCJ6biI6MCwidXIiOiJodHRwOi8vd3d3LmxhdW5jaGJpdC5jb20vdGF6Lzk1MzMtNDY0Ni0xMTEvIn0&amp;s=F-YbPOFW841SFJ94qe5qeMDB8Mk" title="Free Nerd Life tee." target="_blank"><img id="adzerk_ad" class="carbonad-image carbonad-img" border="0" width="130" height="100" src="http://www.launchbit.com/taz-i/4646-4626.png" alt="Free Nerd Life tee."></a></span><span class="carbonad-text"><a href="http://www.launchbit.com/taz/9533-4646-111/" target="_blank">Free Nerd Life tee.</a> Use New Relic to check Ruby, PHP, Python, Java &amp; .NET apps.</span><span class="carbonad-tag"> ads via <a href="http://carbonads.com">Carbon</a></span><img src="http://www.launchbit.com/taz-pixel/9533-4646-111/"><img height="0px" width="0px" border="0" src="http://engine.carbonads.com/i.gif?e=eyJhdiI6MjE0NTIsImF0IjoxLCJjbSI6NDk5MTIsImNoIjoxMjA0LCJjciI6MTM4MzM5LCJkaSI6ImM2ZmM5ZGI4Nzk4NzRhMmI5OTk5NTEzMjk3M2MzZGM1IiwiZG0iOjEsImZjIjoxODk3MDIsImZsIjo4OTY0OCwibnciOjM5LCJydiI6MC45LCJwciI6NDQ4Miwic3QiOjM0MjI5LCJ6biI6MH0&amp;s=e4VpS9cuIL0dOM_LGU_p6FqdhDg"></div>
+    <script>
+    var z = document.createElement("script"); z.async = true;
+    z.src = "//engine.carbonads.com/z/34229/azcarbon_2_1_0_HORIZ";
+    var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);
+    </script>
+  </div>
+</div>
+
+    <a class="logo" href="/">
+      <img class="logo__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Conditionizr">
+    </a>
+    <nav class="site-nav" role="navigation">
+  <ul>
+    <li><a href="/detects"><i class="icon-desktop"></i><span class="site-nav__label">Detects</span></a></li>
+    <li><a href="https://github.com/conditionizr/conditionizr/blob/master/docs/DOCS.md#conditionizr-v400-docs"><i class="icon-file-text"></i><span class="site-nav__label">Documentation</span></a></li>
+    
+    <li><a href="https://github.com/conditionizr/conditionizr"><i class="icon-github"></i><span class="site-nav__label">GitHib</span></a></li>
+  </ul>
+</nav>
+
+  </header>
+  <!-- /header -->
+
+  <!-- main content -->
+  <main class="main" role="main">
+    <div id="content-wrap" class="content-wrap">
+      
+
+
+<section class="intro">
+  <header class="intro__head">
+    <h1 class="intro__description">Custom detects, ready to roll</h1>
+  </header>
+</section>
+
+
+<h2>Chrome</h2>
+
+<textarea class="textarea--code">
+conditionizr.add('chrome', [], function () {
+    return !!window.chrome && !/opera|opr/i.test(navigator.userAgent);
+});
+</textarea>
+
+
+<h2>Safari</h2>
+<textarea class="textarea--code">
+conditionizr.add('safari', [], function () {
+    return /constructor/i.test(window.HTMLElement);
+});
+</textarea>
+
+<h2>Firefox</h2>
+<textarea class="textarea--code">
+conditionizr.add('firefox', [], function () {
+    return typeof InstallTrigger !== 'undefined';
+});
+</textarea>
+
+<h2>Opera</h2>
+<textarea class="textarea--code">
+conditionizr.add('opera', [], function () {
+    return !!window.opera || /opera|opr/i.test(navigator.userAgent);
+});
+</textarea>
+
+<h2>IE 10</h2>
+<textarea class="textarea--code">
+conditionizr.add('ie10', [], function () {
+    var version = false;
+    /*@cc_on
+        if (/^10/.test(@_jscript_version) && /MSIE 10\.0(?!.*IEMobile)/i.test(navigator.userAgent))
+        version = true
+    @*/
+    return version;
+});
+</textarea>
+
+<h2>IE 10 Touch</h2>
+<textarea class="textarea--code">
+conditionizr.add('ie10touch', [], function () {
+    return /MSIE 10\.0.*Touch(?!.*IEMobile)/i.test(navigator.userAgent);
+});
+</textarea>
+
+<h2>IE 9</h2>
+<textarea class="textarea--code">
+conditionizr.add('ie9', [], function () {
+    var version = false;
+    /*@cc_on
+        if (/^9/.test(@_jscript_version) && /MSIE 9\.0(?!.*IEMobile)/i.test(navigator.userAgent))
+        version = true
+    @*/
+    return version;
+});
+</textarea>
+
+<h2>IE 8</h2>
+<textarea class="textarea--code">
+conditionizr.add('ie8', [], function () {
+    var version = false;
+    /*@cc_on
+        if (@_jscript_version > 5.7 && !/^(9|10)/.test(@_jscript_version))
+        version = true
+    @*/
+    return version;
+});
+</textarea>
+
+<h2>IE 7</h2>
+<textarea class="textarea--code">
+conditionizr.add('ie7', [], function () {
+    var version = false;
+    /*@cc_on
+        if (@_jscript_version == 5.7 && window.XMLHttpRequest && /MSIE 7\.0(?!.*IEMobile)/i.test(navigator.userAgent))
+        version = true
+    @*/
+    return version;
+});
+</textarea>
+
+<h2>IE 6</h2>
+<textarea class="textarea--code">
+conditionizr.add('ie6', [], function () {
+    var version = false;
+    /*@cc_on
+        if (@_jscript_version == 5.6 || (@_jscript_version == 5.7 && /MSIE 6\.0/i.test(navigator.userAgent)))
+        version = true
+    @*/
+    return version;
+});
+</textarea>
+
+<h2>Retina</h2>
+<textarea class="textarea--code">
+conditionizr.add('retina', [], function () {
+    return !!window.devicePixelRatio >= 1.5;
+});
+</textarea>
+
+<h2>Touch</h2>
+<textarea class="textarea--code">
+conditionizr.add('touch', [], function () {
+    return !!'ontouchstart' in window || !!navigator.msMaxTouchPoints;
+});
+</textarea>
+
+<h2>iOS</h2>
+<textarea class="textarea--code">
+conditionizr.add('ios', [], function () {
+    return /(iPad|iPhone|iPod)/i.test(navigator.userAgent);
+});
+</textarea>
+
+<h2>Windows Phone 8</h2>
+<textarea class="textarea--code">
+conditionizr.add('winPhone8', [], function () {
+    return /Windows Phone 8.0/i.test(navigator.userAgent);
+});
+</textarea>
+
+<h2>Windows Phone 7.5</h2>
+<textarea class="textarea--code">
+conditionizr.add('winPhone75', [], function () {
+    return /Windows Phone 7.5/i.test(navigator.userAgent);
+});
+</textarea>
+
+<h2>Windows Phone 7</h2>
+<textarea class="textarea--code">
+conditionizr.add('winPhone7', [], function () {
+    return /Windows Phone 7.0/i.test(navigator.userAgent);
+});
+</textarea>
+
+<h2>Mac</h2>
+<textarea class="textarea--code">
+conditionizr.add('mac', [], function () {
+    return /mac/i.test(navigator.platform);
+});
+</textarea>
+
+<h2>Windows</h2>
+<textarea class="textarea--code">
+conditionizr.add('windows', [], function () {
+    return /win/i.test(navigator.platform);
+});
+</textarea>
+
+<h2>Chrome</h2>
+<textarea class="textarea--code">
+conditionizr.add('chromium', [], function () {
+    return /cros i686/i.test(navigator.platform);
+});
+</textarea>
+
+<h2>Linux</h2>
+<textarea class="textarea--code">
+conditionizr.add('linux', [], function () {
+    return /linux/i.test(navigator.platform) && !/android|cros/i.test(navigator.userAgent);
+});
+</textarea>
+
+    </div>
+  </main>
+  <!-- /main content -->
+
+  <!-- authors -->
+  <section class="authors">
+    <div class="container">
+      <p class="authors__title">Conditionizr is brought to you by:</p>
+      <div class="author">
+         <a href="//toddmotto.com">
+          <img class="author__img" src="../assets/img/todd-motto.jpg" alt="Todd Motto">
+          <p>Todd Motto</p>
+        </a>
+         <a href="//twitter.com/toddmotto" class="twitter-follow-button" data-show-count="false">Follow @toddmotto</a>
+      </div>
+      <div class="author">
+        <a href="//markgoodyear.com">
+          <img class="author__img" src="../assets/img/mark-goodyear.jpg" alt="Mark Goodyear">
+          <p>Mark Goodyear</p>
+        </a>
+        <a href="//twitter.com/markgdyr" class="twitter-follow-button" data-show-count="false">Follow @markgdyr</a>
+      </div>
+    </div>
+  </section>
+  <!-- authors -->
+
+  <!-- footer -->
+  <footer class="site-foot" role="contentinfo">
+    Copyright &copy; 2013. Conditionizr is available under the MIT license.
+  </footer>
+  <!-- /footer -->
+
+  <!-- Scripts -->
+  
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <script src="../assets/js/global.min.js"></script>
+  <script>
+    (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
+    (f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
+    l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-20440416-12');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
