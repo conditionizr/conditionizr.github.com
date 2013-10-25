@@ -21,14 +21,14 @@
 
   conditionizr.polyfill('../assets/js/vendor/html5shiv.min.js', ['ie8']);
   conditionizr.polyfill('../assets/js/vendor/selectivizr.min.js', ['ie8']);
-
   </script>
   <!-- /conditionizr -->
 
   <!-- meta -->
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Detecting front-end environments and conditionally loading assets, wrapped inside a 1KB API">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
 
   <!-- prefetch -->
   <link href="//www.google-analytics.com" rel="dns-prefetch">
@@ -63,7 +63,7 @@
     <li><a href="/detects"><i class="icon-desktop"></i><span class="site-nav__label">Detects</span></a></li>
     <li><a href="https://github.com/conditionizr/conditionizr/blob/master/docs/DOCS.md#conditionizr-v400-docs"><i class="icon-file-text"></i><span class="site-nav__label">Documentation</span></a></li>
     
-    <li><a href="https://github.com/conditionizr/conditionizr"><i class="icon-github"></i><span class="site-nav__label">GitHib</span></a></li>
+    <li><a href="https://github.com/conditionizr/conditionizr"><i class="icon-github"></i><span class="site-nav__label">GitHub</span></a></li>
   </ul>
 </nav>
 
@@ -287,12 +287,11 @@ conditionizr.add('linux', [], function () {
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   <script src="../assets/js/global.min.js"></script>
   <script>
-    (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
-    (f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
-    l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-20440416-12');
-    ga('send', 'pageview');
+    // Google Analytics
+    var _gaq=[['_setAccount','UA-20440416-12'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src='//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)})(document,'script');
   </script>
 </body>
 </html>

@@ -2983,6 +2983,12 @@ pre .chunk {
   clear: both;
 }
 
+.logo {
+  display: block;
+  width: 200px;
+  margin: 20px auto -88px;
+}
+
 .logo__img {
   display: block;
   width: 200px;
