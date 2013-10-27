@@ -4,9 +4,6 @@
  * Copyright 2013
  */
 
-@charset "UTF-8";
-
-
 /*--------------------------------------*\
   Grid Settings
 \*--------------------------------------*/
@@ -16,7 +13,7 @@
   box-sizing: border-box;
 }
 
-/*!
+/*
  *  Font Awesome 3.2.1
  *  the iconic font designed for Bootstrap
  *  ------------------------------------------------------------------------------
@@ -1948,7 +1945,7 @@ a .icon-flip-vertical:before {
  * Strip Units
  */
 
-/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* normalize.css v2.1.2 | MIT License | git.io/normalize */
 
 /* ==========================================================================
    HTML5 display definitions
@@ -2981,6 +2978,12 @@ pre .chunk {
 
 .site-head:after {
   clear: both;
+}
+
+.logo {
+  display: block;
+  width: 200px;
+  margin: 20px auto -88px;
 }
 
 .logo__img {
