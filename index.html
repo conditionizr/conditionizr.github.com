@@ -143,6 +143,10 @@
 <pre><code class="language-js">conditionizr.on(<span class="string">'safari'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
   <span class="comment">// safari</span>
 });</code></pre>
+<p>You can also ignore an environment using the JavaScript '!' operator</p>
+<pre><code class="language-js">conditionizr.on(<span class="string">'!safari'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+  <span class="comment">// ignore safari</span>
+});</code></pre>
 <p>Conditionizr returns an object for you to also test environment states inside expressions</p>
 <pre><code class="language-js"><span class="keyword">if</span> (conditionizr.safari) {
   <span class="comment">// safari</span>
