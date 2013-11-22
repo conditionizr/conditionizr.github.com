@@ -112,6 +112,13 @@ conditionizr.add('opera', [], function () {
 });
 </textarea>
 
+<h2>IE 11</h2>
+<textarea class="textarea--code">
+conditionizr.add('ie11', [], function () {
+  return /(?:\sTrident\/7\.0;.*\srv:11\.0)/i.test(navigator.userAgent);
+});
+</textarea>
+
 <h2>IE 10</h2>
 <textarea class="textarea--code">
 conditionizr.add('ie10', [], function () {
