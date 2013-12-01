@@ -3255,6 +3255,13 @@ pre code,
   margin: 20px auto -88px;
 }
 
+@media screen and (max-width: 860px) {
+  .logo {
+    width: 150px;
+    margin: 20px 20px -66px;
+  }
+}
+
 .logo__img {
   display: block;
   width: 200px;

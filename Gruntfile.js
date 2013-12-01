@@ -287,7 +287,7 @@ module.exports = function(grunt) {
 
       sass: {
         files: '<%= styles.src.dir %>/**/*.scss',
-        tasks: ['sass:dev', 'autoprefixer', 'cssmin']
+        tasks: ['sass', 'autoprefixer', 'cssmin']
       },
 
       scripts: {
