@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+
+  <!-- meta -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Detecting front-end environments and conditionally loading assets, wrapped inside a 1KB API">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- conditionizr -->
+  <script src="/assets/js/vendor/conditionizr.min.js"></script>
+  <script>
+  conditionizr.add('ie8', [], function () {
+      var version = false;
+      /*@cc_on
+          if (@_jscript_version > 5.7 && !/^(9|10)/.test(@_jscript_version))
+          version = true
+      @*/
+      return version;
+  });
+  conditionizr.add('svg', ['class'], function () {
+      return !! document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect;
+  });
+
+  conditionizr.polyfill('/assets/js/vendor/html5shiv.min.js', ['ie8']);
+  conditionizr.polyfill('/assets/js/vendor/selectivizr.min.js', ['ie8']);
+  </script>
+  <!-- /conditionizr -->
+
+  <!--[if IE]><![endif]-->
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <!-- prefetch -->
+  <link href="//www.google-analytics.com" rel="dns-prefetch">
+  <link href="//ajax.googleapis.com" rel="dns-prefetch">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="/assets/css/global.min.css">
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- header -->
+  <header class="site-head" role="banner">
+    {% include ads.html %}
+    <a class="logo" href="/">
+      <img class="logo__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Conditionizr">
+    </a>
+    <nav class="site-nav" role="navigation">
+      <ul>
+        <li><a href="/detects"><i class="icon-desktop"></i><span class="site-nav__label">Detects</span></a></li>
+        <li><a href="https://github.com/conditionizr/conditionizr/blob/master/docs/DOCS.md#conditionizr-v400-docs"><i class="icon-file-text"></i><span class="site-nav__label">Documentation</span></a></li>
+        <!-- <li><a href="#"><i class="icon-shopping-cart"></i>Merchendise</a></li> -->
+        <li><a href="https://github.com/conditionizr/conditionizr"><i class="icon-github"></i><span class="site-nav__label">GitHub</span></a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- /header -->

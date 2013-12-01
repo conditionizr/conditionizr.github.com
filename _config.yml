@@ -1,0 +1,6 @@
+auto: true
+server: true
+exclude: ['README.md', '_src/', 'node_modules', 'package.json', 'Gruntfile.js', '*.command']
+markdown: redcarpet
+permalink: pretty
+pygments: true

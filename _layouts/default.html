@@ -1,0 +1,60 @@
+{% include header.html %}
+
+  <!-- main content -->
+  <main class="main" role="main">
+    <div id="content-wrap" class="content-wrap">
+
+      <!-- intro -->
+      <section class="intro">
+        <header class="intro__head">
+          <p class="intro__description">{{ page.intro }}</p>
+        </header>
+
+        <!-- download -->
+        <div class="download">
+          <a class="btn download__btn" href="//github.com/conditionizr/conditionizr/archive/v4.0.0.zip"><i class="icon-download-alt"></i> Download v4</a>
+          <div class="download__git">
+            <input type="text" value="git clone https://github.com/conditionizr/conditionizr.git" onclick="this.focus();this.select()">
+          </div>
+        </div>
+        <!-- download -->
+
+        <!-- social -->
+        <ul class="social">
+          <li><iframe src="//ghbtns.com/github-btn.html?user=conditionizr&repo=conditionizr&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90" height="20"></iframe></li>
+          <li><a href="//twitter.com/share" class="twitter-share-button" data-url="http://conditionizr.com" data-via="conditionizr">Tweet</a></li>
+          <li><a href="//twitter.com/conditionizr" class="twitter-follow-button" data-show-count="true">Follow @conditionizr</a></li>
+        </ul>
+        <!-- /social -->
+
+      </section>
+      <!-- /intro -->
+
+      {{ content }}
+    </div>
+  </main>
+  <!-- /main content -->
+
+  <!-- authors -->
+  <section class="authors">
+    <div class="container">
+      <p class="authors__title">Conditionizr is brought to you by:</p>
+      <div class="author">
+         <a href="//toddmotto.com">
+          <img class="author__img" src="/assets/img/todd-motto.jpg" alt="Todd Motto">
+          <p>Todd Motto</p>
+        </a>
+         <a href="//twitter.com/toddmotto" class="twitter-follow-button" data-show-count="false">Follow @toddmotto</a>
+      </div>
+      <div class="author">
+        <a href="//markgoodyear.com">
+          <img class="author__img" src="/assets/img/mark-goodyear.jpg" alt="Mark Goodyear">
+          <p>Mark Goodyear</p>
+        </a>
+        <a href="//twitter.com/markgdyr" class="twitter-follow-button" data-show-count="false">Follow @markgdyr</a>
+      </div>
+    </div>
+  </section>
+  <!-- authors -->
+
+{% include footer.html %}

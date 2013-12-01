@@ -1,0 +1,47 @@
+/*--------------------------------------*\
+  Base
+\*--------------------------------------*/
+
+.intro {
+  padding-bottom: 40px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $grey-light;
+}
+
+.intro__head {
+  text-align: center;
+}
+
+.intro__description {
+  @include font-size($h1-size, false);
+  font-style: italic;
+  font-weight: 300;
+  color: $grey-dark;
+}
+
+.intro__more {
+  @include font-size($h2-size);
+}
+
+.social {
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  @include font-size(24px);
+
+  li {
+    display: inline;
+    margin: 0 10px;
+    @include media($mob) {
+      display: inline-block;
+      margin: 10px 10px;
+    }
+  }
+
+  a {
+    color: $grey-med;
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+}

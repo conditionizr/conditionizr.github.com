@@ -1,7 +1,6 @@
 /*!
- * Conditionizr
- * http://conditionizr.com
- * Copyright 2013
+ * Conditionizr v0.1.0
+ * Copyright Conditionizr (http://conditionizr.com) 2013
  */
 (function() {
     var method;
@@ -25,10 +24,10 @@
     }
 }());
 
+
 // no-js to js
 var html = document.documentElement;
 html.className = html.className.replace(/(^|\s)no-js(\s|$)/, ' js ');
-
 
 
 // Select text in .textarea--code
@@ -44,7 +43,6 @@ for(var i = 0; i < textAreas.length; i++) {
   var textBox = textAreas[i];
   selectText(textBox);
   textBox.style.height = (textBox.scrollHeight) + 'px';
-  console.log();
 }
 
 

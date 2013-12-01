@@ -1,0 +1,20 @@
+/*--------------------------------------*\
+  Grid Settings
+\*--------------------------------------*/
+
+@import "../vendor/neat/neat-helpers";
+
+$column: 56px;
+$gutter: 44px;
+$grid-columns: 12;
+$max-width: 1156px;
+
+// $visual-grid : true;
+$mob: new-breakpoint(max-width 480px 12);               // Mobile
+$tab: new-breakpoint(max-width 620px 12);               // Tablet
+$lap: new-breakpoint(max-width 860px 12);               // Laptop
+$desk: new-breakpoint(max-width 960px 12);              // Desktop
+
+// #visual-grid-breakpoints {
+//   value: $visual-grid-breakpoints
+// }

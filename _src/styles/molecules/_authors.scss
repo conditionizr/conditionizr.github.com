@@ -1,0 +1,47 @@
+/*--------------------------------------*\
+  Authors
+\*--------------------------------------*/
+
+.authors {
+  @include clearfix;
+  text-align: center;
+}
+
+.authors__title {
+  margin: 30px auto;
+  color: $grey-med;
+  font-style: italic;
+}
+
+.author {
+  display: inline-block;
+  width: 175px;
+  @include font-size(14px);
+  margin: 30px auto;
+  a {
+    color: $grey-med;
+  }
+
+  &:hover {
+    a {
+      color: $brand-primary;
+    }
+    .author__img {
+      border-color: $brand-primary;
+    }
+  }
+
+  @include media($mob) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.author__img {
+  margin: auto;
+  margin-bottom: 20px;
+  display: block;
+  border-radius: 50%;
+  border: 4px solid $grey-light;
+  transition: all 0.2s ease-in-out;
+}

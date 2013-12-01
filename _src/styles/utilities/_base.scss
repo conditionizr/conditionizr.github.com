@@ -1,0 +1,80 @@
+/*--------------------------------------*\
+  Base
+\*--------------------------------------*/
+
+// border-box
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+// Base set up
+html {
+  font: #{($base-font-size/16px)*1em}/#{$line-height-ratio} $font-primary;
+  overflow-y: scroll;
+  min-height: 100%;
+
+  @include media($mob) {
+    @include font-size(16px);
+  }
+
+  // Baseline grid overlay
+  @if $show-baseline == true {
+    $baseline-height: strip-units($base-font-size);
+    background-image: url(http://basehold.it/i/#{$baseline-height});
+  }
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  background: $brand-secondary;
+  color: $grey-dark;
+}
+
+::selection {
+  background: $brand-primary;
+  }
+::-moz-selection {
+  background: $brand-primary;
+}
+::-webkit-selection {
+  background: $brand-primary;
+}
+
+.content-wrap {
+  @include outer-container;
+  background: #fafafa;
+  padding: 110px 80px 60px;
+  border-radius: $global-radius;
+  text-shadow: 0 1px 0 rgba(255,255,255,1);
+  @include media($lap) {
+    padding: 110px 40px 20px;
+  }
+  @include media($mob) {
+    padding: 90px 20px 20px;
+  }
+}
+
+#carbonads-container {
+  position: absolute;
+  width: 300px;
+  top: 10px;
+  @include media($lap) {
+    display: none;
+  }
+}
+
+#carbonads-container .carbonad {
+  border: none;
+  background: none;
+  color: #fff;
+  text-shadow: none;
+
+  a {
+    color: #eee;
+  }
+}

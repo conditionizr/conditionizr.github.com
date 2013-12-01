@@ -1,0 +1,14 @@
+/*--------------------------------------*\
+  Links
+\*--------------------------------------*/
+
+a {
+  transition: all 0.2s ease-in-out;
+  color: $brand-primary;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: darken($brand-primary, 15);
+  }
+}
