@@ -18,6 +18,11 @@
     width: 150px;
     margin: 20px 20px -66px;
   }
+
+  @include media($mob) {
+    width: 120px;
+    margin: 20px 20px -53px 10px;
+  }
 }
 
 .logo__img {
@@ -35,7 +40,7 @@
 
   @include media($lap) {
     width: 150px;
-    margin: 20px 20px -66px;
+    margin: 0 20px -53px 0;
   }
 }
 
@@ -61,15 +66,25 @@
         color: $brand-tertiary;
       }
     }
-    @include media($mob) {
+    @include media($tab) {
       @include font-size(32px, false);
+    }
+
+    @include media($mob) {
+      @include font-size(24px, false);
+      margin-left: 15px;
     }
   }
 
   .site-nav__label {
-    @include media($mob) {
+    @include media($tab) {
       display: none;
+      @include font-size(32px, false);
     }
+  }
+
+  @include media($tab) {
+    top: 30px;
   }
 
   @include media($mob) {

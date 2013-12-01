@@ -3262,6 +3262,13 @@ pre code,
   }
 }
 
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 120px;
+    margin: 20px 20px -53px 10px;
+  }
+}
+
 .logo__img {
   display: block;
   width: 200px;
@@ -3279,7 +3286,7 @@ pre code,
 @media screen and (max-width: 860px) {
   .logo__img {
     width: 150px;
-    margin: 20px 20px -66px;
+    margin: 0 20px -53px 0;
   }
 }
 
@@ -3310,7 +3317,7 @@ pre code,
   color: #1e9fc7;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 620px) {
   .site-nav li {
     font-size: 32px;
     font-size: 1.77778rem;
@@ -3318,8 +3325,24 @@ pre code,
 }
 
 @media screen and (max-width: 480px) {
+  .site-nav li {
+    font-size: 24px;
+    font-size: 1.33333rem;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 620px) {
   .site-nav .site-nav__label {
     display: none;
+    font-size: 32px;
+    font-size: 1.77778rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .site-nav {
+    top: 30px;
   }
 }
 
