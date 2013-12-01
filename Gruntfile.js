@@ -29,8 +29,9 @@ module.exports = function(grunt) {
 
     // Banner to be used on compiled files
     banner: '/*!\n' +
-            ' * <%= pkg.title %> v<%= pkg.version %>\n' +
-            ' * Copyright <%= pkg.author.name %> (<%= pkg.author.url %>) <%= grunt.template.today("yyyy") %>\n' +
+            ' * <%= pkg.title %>\n' +
+            ' * <%= pkg.author.url %>\n' +
+            ' * Copyright <%= grunt.template.today("yyyy") %>\n' +
             ' */\n',
 
     // Root dir setup

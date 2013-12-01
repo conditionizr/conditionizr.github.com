@@ -1,6 +1,7 @@
 /*!
- * Conditionizr v0.1.0
- * Copyright Conditionizr (http://conditionizr.com) 2013
+ * Conditionizr
+ * http://conditionizr.com
+ * Copyright 2013
  */
 (function() {
     var method;

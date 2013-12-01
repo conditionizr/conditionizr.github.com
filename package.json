@@ -2,7 +2,7 @@
   "name": "conditionizr",
   "title": "Conditionizr",
   "description": "Detecting front-end environments and conditionally loading assets, wrapped inside a 1KB API",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "http://conditionizr.com",
   "author": {
     "name": "Conditionizr",
