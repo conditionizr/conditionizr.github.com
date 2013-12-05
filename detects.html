@@ -7,7 +7,7 @@ intro: "Custom detects, ready to roll"
 <h2>Chrome</h2>
 <textarea class="textarea--code">
 conditionizr.add('chrome', [], function () {
-  return !!window.chrome && !/opera|opr/i.test(navigator.userAgent);
+  return !!window.chrome && /google/i.test(navigator.vendor);
 });
 </textarea>
 
