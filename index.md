@@ -24,8 +24,8 @@ This would then load browser specific tweaks, or you could use the global class 
 ```html
 <html class="safari">
   <head>
-    <script src="path/to/my/assets/js/safari.js"></script>
-    <link href="path/to/my/assets/css/safari.css" rel="stylesheet">
+    <script src="assets/conditionizr/safari.js"></script>
+    <link href="assets/conditionizr/safari.css" rel="stylesheet">
   </head>
 </html>
 ```
