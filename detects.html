@@ -4,21 +4,21 @@ title: "Conditionizr: Detecting front-end environments and conditionally loading
 intro: "Custom detects, ready to roll"
 ---
 
-<h2>Chrome</h2>
+<h2 id="chrome">Chrome</h2>
 <textarea class="textarea--code">
 conditionizr.add('chrome', [], function () {
   return !!window.chrome && /google/i.test(navigator.vendor);
 });
 </textarea>
 
-<h2>Safari</h2>
+<h2 id="safari">Safari</h2>
 <textarea class="textarea--code">
 conditionizr.add('safari', [], function () {
   return /constructor/i.test(window.HTMLElement);
 });
 </textarea>
 
-<h2>Firefox</h2>
+<h2 id="firefox">Firefox</h2>
 <textarea class="textarea--code">
 conditionizr.add('firefox', [], function () {
   return typeof InstallTrigger !== 'undefined';
