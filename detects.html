@@ -12,35 +12,35 @@ conditionizr.add('chrome', [], function () {
 </textarea>
 
 <h2 id="safari">Safari</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('safari', [], function () {
   return /constructor/i.test(window.HTMLElement);
 });
 </textarea>
 
 <h2 id="firefox">Firefox</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('firefox', [], function () {
   return typeof InstallTrigger !== 'undefined';
 });
 </textarea>
 
 <h2 id="opera">Opera</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('opera', [], function () {
   return !!window.opera || /opera|opr/i.test(navigator.userAgent);
 });
 </textarea>
 
 <h2 id="ie11">IE 11</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('ie11', [], function () {
   return /(?:\sTrident\/7\.0;.*\srv:11\.0)/i.test(navigator.userAgent);
 });
 </textarea>
 
 <h2 id="ie10">IE 10</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('ie10', [], function () {
   var version = false;
   /*@cc_on
@@ -52,14 +52,14 @@ conditionizr.add('ie10', [], function () {
 </textarea>
 
 <h2 id="ie10touch">IE 10 Touch</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('ie10touch', [], function () {
   return /MSIE 10\.0.*Touch(?!.*IEMobile)/i.test(navigator.userAgent);
 });
 </textarea>
 
 <h2 id="ie9">IE 9</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('ie9', [], function () {
   var version = false;
   /*@cc_on
@@ -71,7 +71,7 @@ conditionizr.add('ie9', [], function () {
 </textarea>
 
 <h2 id="ie8">IE 8</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('ie8', [], function () {
   var version = false;
   /*@cc_on
@@ -83,7 +83,7 @@ conditionizr.add('ie8', [], function () {
 </textarea>
 
 <h2 id="i7">IE 7</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('ie7', [], function () {
   var version = false;
   /*@cc_on
@@ -95,7 +95,7 @@ conditionizr.add('ie7', [], function () {
 </textarea>
 
 <h2 id="ie6">IE 6</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('ie6', [], function () {
   var version = false;
   /*@cc_on
@@ -107,70 +107,70 @@ conditionizr.add('ie6', [], function () {
 </textarea>
 
 <h2 id="retina">Retina</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('retina', [], function () {
   return !!window.devicePixelRatio >= 1.5;
 });
 </textarea>
 
 <h2 id="touch">Touch</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('touch', [], function () {
   return !!'ontouchstart' in window || !!navigator.msMaxTouchPoints;
 });
 </textarea>
 
 <h2 id="ios">iOS</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('ios', [], function () {
   return /iP(ad|hone|od)/i.test(navigator.userAgent);
 });
 </textarea>
 
 <h2 id="wp8">Windows Phone 8</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('winPhone8', [], function () {
   return /Windows Phone 8.0/i.test(navigator.userAgent);
 });
 </textarea>
 
 <h2 id="wp75">Windows Phone 7.5</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('winPhone75', [], function () {
   return /Windows Phone 7.5/i.test(navigator.userAgent);
 });
 </textarea>
 
 <h2 id="wp7">Windows Phone 7</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('winPhone7', [], function () {
   return /Windows Phone 7.0/i.test(navigator.userAgent);
 });
 </textarea>
 
 <h2 id="mac">Mac</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('mac', [], function () {
   return /mac/i.test(navigator.platform);
 });
 </textarea>
 
 <h2 id="windows">Windows</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('windows', [], function () {
   return /win/i.test(navigator.platform);
 });
 </textarea>
 
 <h2 id="chromium">Chromium</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('chromium', [], function () {
   return /cros i686/i.test(navigator.platform);
 });
 </textarea>
 
 <h2 id="linux">Linux</h2>
-<textarea class="textarea--code">
+<textarea class="textarea--code" spellcheck="false">
 conditionizr.add('linux', [], function () {
   return /linux/i.test(navigator.platform) && !/android|cros/i.test(navigator.userAgent);
 });
