@@ -28,7 +28,7 @@ conditionizr.add('firefox', [], function () {
 <h2 id="opera">Opera</h2>
 <textarea class="textarea--code" spellcheck="false" readonly="readonly">
 conditionizr.add('opera', [], function () {
-  return !!window.opera || /opera|opr/i.test(navigator.userAgent);
+  return !!window.opera || /opera/i.test(navigator.vendor);
 });
 </textarea>
 
