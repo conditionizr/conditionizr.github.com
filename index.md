@@ -34,7 +34,7 @@ This would then load browser specific tweaks, or you could use the global class 
 Custom tests can be bolted into the Conditionizr core and used with all the APIs, making your conditional coding seamless. Conditionizr will handle all the hard work for you, you just need to provide it a test that returns a boolean, true/false.
 
 ```js
-conditionizr.add('safari', [], function () {
+conditionizr.add('safari', function () {
   return /constructor/i.test(window.HTMLElement);
 });
 ```
