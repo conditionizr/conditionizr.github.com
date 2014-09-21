@@ -12,20 +12,16 @@
   <!-- conditionizr -->
   <script src="/assets/js/vendor/conditionizr.js"></script>
   <script>
-  conditionizr.add('ie8', function () {
-      var version = false;
-      /*@cc_on
-          if (@_jscript_version > 5.7 && !/^(9|10)/.test(@_jscript_version))
-          version = true
-      @*/
-      return version;
+  conditionizr.add('ie8', !!(Function('/*@cc_on return (@_jscript_version > 5.7 && !/^(9|10)/.test(@_jscript_version)); @*/')()));
+  conditionizr.add('svg', !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect);
+  conditionizr.config({
+    assets: '/assets/js/vendor/',
+    tests: {
+      svg: ['class']
+    }
   });
-  conditionizr.add('svg', ['class'], function () {
-      return !! document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect;
-  });
-
-  conditionizr.polyfill('/assets/js/vendor/html5shiv.min.js', ['ie8']);
-  conditionizr.polyfill('/assets/js/vendor/selectivizr.min.js', ['ie8']);
+  conditionizr.polyfill('/html5shiv.min.js', ['ie8']);
+  conditionizr.polyfill('/selectivizr.min.js', ['ie8']);
   </script>
   <!-- /conditionizr -->
 
