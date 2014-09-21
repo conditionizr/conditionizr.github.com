@@ -1,4 +1,4 @@
-/*! conditionizr v4.4.0 | (c) 2014 @toddmotto, @markgdyr | MIT license | conditionizr.com */
+/*! conditionizr v4.5.0 | (c) 2014 @toddmotto, @markgdyr | https://github.com/conditionizr */
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     define(factory);
@@ -22,17 +22,16 @@
   };
 
   conditionizr.add = function (prop, fn) {
-    conditionizr[prop] = fn();
+    conditionizr[prop] = typeof fn === 'function' ? fn() : fn;
   };
 
   conditionizr.on = function (prop, fn) {
-    (conditionizr[prop] || /\!/.test(prop) && !conditionizr[prop.replace(/\!/, '')]) && fn();
+    (conditionizr[prop] || /\!/.test(prop) && !conditionizr[prop.slice(1)]) && fn();
   };
 
   conditionizr.load = conditionizr.polyfill = function (file, props) {
-    var task = /\.js$/.test(file) ? 'script' : 'style';
     for (var i = props.length; i--;) {
-      conditionizr[props[i]] && load(file, [task], true);
+      conditionizr[props[i]] && load(file, [/\.js$/.test(file) ? 'script' : 'style'], true);
     }
   };
 
